@@ -13,13 +13,13 @@ layout: default
 						<hr>
     <ul class="post-list">
         <h3>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}.html">
             {{ post.title }}
           </a>
 		  </h3>
 		  
 		<p><i class="fa fa-calendar"></i> &nbsp;{{ post.date | date: "%b %-d, %Y" }} | {% if site.disqus_short_name and page.comments != false and site.disqus_show_comment_count == true %}
-         <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread">Comentarios</a>
+         <a href="{{ post.url | prepend: site.baseurl }}.html#disqus_thread">Comentarios</a>
 		{% endif %}</p>
 		<article class="blog-post-small blog-post-content">
                   {% if post.content contains '<!-- more -->' %}
