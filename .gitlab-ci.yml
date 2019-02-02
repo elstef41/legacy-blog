@@ -1,0 +1,14 @@
+image: ruby:2.6
+
+pages:
+  script:
+  - gem install jekyll
+  - jekyll build -d public/
+  - gem install jekyll-youtube
+  - gem install jekyll-tagging
+
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
