@@ -1,0 +1,51 @@
+{% assign author = site.authors[page.author] %}
+{% assign comments = site.comments[page.comments] %}
+<h1>{{ comments }}</h1>
+<!-- Output author details if some exist. -->
+{% if author %}
+<div class="author_block col-md-12">
+  <div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-2">
+      <p>Escrito por <strong>{{ author.display_name }}</strong></p> 
+  </div>
+  <div class="col-md-3">    
+        <ul>
+          <li><a href="http://github.com/{{ author.github }}" target="_blank"><i class="fa fa-github"></i></a></li>
+          <li><a href="http://facebook.com/{{ author.facebook }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="http://twitter.com/{{ author.twitter }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="http://in.linkedin.com/in/{{ author.linkedin }}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="mailto:{{author.email}}" target="_blank"><i class="fa fa-send-o"></i></a></li>
+        </ul>
+    </div>
+    <div class="col-md-2"></div>
+    </div>
+</div>
+{% endif %}
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+this.page.url = "https://elstef41.gitlab.io";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "elstef41-1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+(function() {
+var d = document, s = d.createElement('script');
+s.src = 'https://elstef41-1.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>             
+
+    <ul class="pager">
+      {% if page.previous.url %}
+      <li class="previous"><a class="basic-alignment left"
+        href="{{page.previous.url}}" title="Previous Post:
+        {{page.previous.title}}">&laquo; {{page.previous.title}}</a></li>
+      {% endif %}
+      {% if page.next.url %}
+      <li class="next"><a class="basic-alignment right" href="{{page.next.url}}"
+        title="Next Post: {{page.next.title}}">{{page.next.title}}
+        &raquo;</a></li>
+      {% endif %}
+    </ul>

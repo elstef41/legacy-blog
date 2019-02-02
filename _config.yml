@@ -1,0 +1,31 @@
+# Site settings
+title: elstef41
+description: Blog oficial
+email: 
+baseurl: 
+url: "" # the base hostname & protocol for your site
+
+youtube_username: elstef41
+wordpress_username: elstef41
+
+permalink: /blog/:day/:month/:year/:title
+# Build settings
+markdown: kramdown
+
+#Disqus configuration
+disqus_short_name: maangalabscom
+disqus_show_comment_count: true
+
+#Can be used for multiple author blogs ! Add name to post For more visit the sample
+authors:
+  pranavrajs:
+    display_name: elstef41
+    yt: elstef41
+    
+#youtube en artículos
+plugins: [jekyll-youtube]
+
+
+#plugin de tags para artículos
+tag_page_layout: tag_page
+tag_page_dir: tag
