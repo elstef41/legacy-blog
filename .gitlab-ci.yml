@@ -2,11 +2,6 @@ image: ruby:2.6
 
 pages:
   script:
-  - gem install jekyll
-  - gem install bundler
-  - gem install jekyll-youtube
-  - gem install jekyll-tagging
-  - gem install minima
   - jekyll build -d public/
 
   artifacts:
